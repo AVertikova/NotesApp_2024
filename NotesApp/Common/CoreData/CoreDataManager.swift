@@ -17,6 +17,7 @@ enum Key: String {
     case date
     case title
     case body
+    case favorite
 }
 
 enum DefaultMessage: String {
@@ -98,6 +99,7 @@ class CoreDataManager: StorageManagerProtocol {
             entity.setValue(noteToSave.date, forKey: Key.date.rawValue)
             entity.setValue(noteToSave.title, forKey: Key.title.rawValue)
             entity.setValue(noteToSave.body, forKey: Key.body.rawValue)
+            entity.setValue(noteToSave.favorite, forKey: Key.favorite.rawValue)
         }
     }
     
@@ -112,6 +114,7 @@ class CoreDataManager: StorageManagerProtocol {
                 item.title = newValue.title
                 item.body = newValue.body
                 item.date = newValue.date
+                item.favorite = newValue.favorite
                 let model: NoteDisplayModel = NoteDisplayModel(with: item)
                 context.delete(item)
                 self.saveNote(noteToSave: model)

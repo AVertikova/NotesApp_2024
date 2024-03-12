@@ -13,4 +13,5 @@ protocol NoteModelProtocol {
     var userFormatDate: String? {get}
     var title: String? {get set}
     var body: String? {get set}
+    var favorite: Bool {get set}
 }

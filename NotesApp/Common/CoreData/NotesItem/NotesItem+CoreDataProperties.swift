@@ -20,6 +20,7 @@ extension NotesItem {
     @NSManaged public var date: Date?
     @NSManaged public var id: UUID?
     @NSManaged public var title: String?
+    @NSManaged public var favorite: Bool
 
 }
 

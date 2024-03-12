@@ -15,6 +15,8 @@ struct NoteDisplayModel: NoteModelProtocol {
     var userFormatDate: String?
     var title: String?
     var body: String?
+    var favorite: Bool = false
+    
 
     init() {}
 
@@ -22,18 +24,22 @@ struct NoteDisplayModel: NoteModelProtocol {
          date: Date = Date(),
          userFormatDate: String = Date().convert(for: .user),
          title: String = " ",
-         body: String = " ") {
+         body: String = " ", 
+         favorite: Bool = false) {
         self.id = id
         self.date = date
         self.userFormatDate = userFormatDate
         self.title = title
         self.body = body
+        self.favorite = favorite
+        
     }
 
     init(with entity: NotesItem) {
         self.init(id: entity.id ?? UUID(),
                   date: entity.date ?? Date(),
                   title: entity.title ?? " ",
-                  body: entity.body ?? " ")
+                  body: entity.body ?? " ",
+                  favorite: entity.favorite)
     }
 }
