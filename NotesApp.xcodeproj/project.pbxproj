@@ -14,23 +14,40 @@
 		EB8056E82B9F0FFE00A9E47A /* NoteDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8056E72B9F0FFE00A9E47A /* NoteDisplayModel.swift */; };
 		EB8056EC2B9F104F00A9E47A /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8056EB2B9F104F00A9E47A /* Date+Formatter.swift */; };
 		EB8056EE2B9F115900A9E47A /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8056ED2B9F115900A9E47A /* UITableView+Extensions.swift */; };
-		EB8056F02B9F118300A9E47A /* Storyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8056EF2B9F118300A9E47A /* Storyboard+Extension.swift */; };
 		EB8056FF2B9F133600A9E47A /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8056FE2B9F133600A9E47A /* HomeBuilder.swift */; };
 		EB8057012B9F143400A9E47A /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057002B9F143400A9E47A /* HomeProtocols.swift */; };
 		EB8057032B9F147900A9E47A /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057022B9F147900A9E47A /* HomeDataManager.swift */; };
 		EB8057052B9F1B6F00A9E47A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057042B9F1B6F00A9E47A /* HomePresenter.swift */; };
 		EB8057082B9F3ECE00A9E47A /* NotesItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057062B9F3ECE00A9E47A /* NotesItem+CoreDataClass.swift */; };
 		EB8057092B9F3ECE00A9E47A /* NotesItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057072B9F3ECE00A9E47A /* NotesItem+CoreDataProperties.swift */; };
-		EB80570B2B9F428600A9E47A /* NotesSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80570A2B9F428600A9E47A /* NotesSorter.swift */; };
 		EB80570D2B9FD73F00A9E47A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80570C2B9FD73F00A9E47A /* HomeViewController.swift */; };
-		EB80570F2B9FD80D00A9E47A /* HomeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80570E2B9FD80D00A9E47A /* HomeSearchController.swift */; };
+		EB80570F2B9FD80D00A9E47A /* NotesSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80570E2B9FD80D00A9E47A /* NotesSearchController.swift */; };
 		EB8057112B9FF45600A9E47A /* HomeViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057102B9FF45600A9E47A /* HomeViewController+Search.swift */; };
 		EB8057152BA0202C00A9E47A /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057142BA0202C00A9E47A /* HomeViewController+TableView.swift */; };
 		EB80571C2BA0212B00A9E47A /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80571A2BA0212B00A9E47A /* NoteCell.swift */; };
 		EB80571D2BA0212B00A9E47A /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB80571B2BA0212B00A9E47A /* NoteCell.xib */; };
 		EB8057202BA037D900A9E47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB80571E2BA037D900A9E47A /* Main.storyboard */; };
 		EB8057212BA037D900A9E47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB80571F2BA037D900A9E47A /* LaunchScreen.storyboard */; };
-		EB8057232BA04E4F00A9E47A /* UIContextualAction+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057222BA04E4F00A9E47A /* UIContextualAction+Configuration.swift */; };
+		EB8057232BA04E4F00A9E47A /* UIContextualAction+ActionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057222BA04E4F00A9E47A /* UIContextualAction+ActionViewConfiguration.swift */; };
+		EB8057252BA060A400A9E47A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057242BA060A400A9E47A /* HomeInteractor.swift */; };
+		EB8057272BA06B3700A9E47A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057262BA06B3700A9E47A /* HomeRouter.swift */; };
+		EB8057292BA06BE200A9E47A /* NoteDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057282BA06BE200A9E47A /* NoteDetailsProtocols.swift */; };
+		EB80572B2BA06BEF00A9E47A /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80572A2BA06BEF00A9E47A /* NoteDetailsViewController.swift */; };
+		EB80572D2BA06BF900A9E47A /* NoteDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80572C2BA06BF900A9E47A /* NoteDetailsInteractor.swift */; };
+		EB80572F2BA06C0000A9E47A /* NoteDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80572E2BA06C0000A9E47A /* NoteDetailsPresenter.swift */; };
+		EB8057312BA06C0800A9E47A /* NoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057302BA06C0800A9E47A /* NoteDataManager.swift */; };
+		EB8057332BA06C1100A9E47A /* NoteDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057322BA06C1100A9E47A /* NoteDetailsRouter.swift */; };
+		EB8057352BA06C1900A9E47A /* NoteDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057342BA06C1900A9E47A /* NoteDetailsBuilder.swift */; };
+		EB80573A2BA1619F00A9E47A /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057392BA1619F00A9E47A /* FavoritesViewController.swift */; };
+		EB80573D2BA164E400A9E47A /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80573C2BA164E400A9E47A /* FavoritesProtocols.swift */; };
+		EB8057402BA16ADB00A9E47A /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80573F2BA16ADB00A9E47A /* FavoritesRouter.swift */; };
+		EB8057432BA16FF300A9E47A /* FavoritesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057422BA16FF300A9E47A /* FavoritesBuilder.swift */; };
+		EB8057462BA173A800A9E47A /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057452BA173A800A9E47A /* FavoritesPresenter.swift */; };
+		EB8057492BA1751400A9E47A /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057482BA1751400A9E47A /* FavoritesInteractor.swift */; };
+		EB80574C2BA1761200A9E47A /* FavoritesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80574B2BA1761200A9E47A /* FavoritesDataManager.swift */; };
+		EB80574F2BA177CF00A9E47A /* FavoritesViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80574E2BA177CF00A9E47A /* FavoritesViewController+Search.swift */; };
+		EB8057512BA1783200A9E47A /* FvoritesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057502BA1783200A9E47A /* FvoritesViewController+TableView.swift */; };
+		EB8057532BA183CF00A9E47A /* Array+SortByFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057522BA183CF00A9E47A /* Array+SortByFavorites.swift */; };
 		EBA3CF5F2B9F03D3004201B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF5E2B9F03D3004201B0 /* AppDelegate.swift */; };
 		EBA3CF692B9F03D3004201B0 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF672B9F03D3004201B0 /* NotesApp.xcdatamodeld */; };
 		EBA3CF6B2B9F03D4004201B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA3CF6A2B9F03D4004201B0 /* Assets.xcassets */; };
@@ -64,23 +81,40 @@
 		EB8056E72B9F0FFE00A9E47A /* NoteDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDisplayModel.swift; sourceTree = "<group>"; };
 		EB8056EB2B9F104F00A9E47A /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		EB8056ED2B9F115900A9E47A /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
-		EB8056EF2B9F118300A9E47A /* Storyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Extension.swift"; sourceTree = "<group>"; };
 		EB8056FE2B9F133600A9E47A /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		EB8057002B9F143400A9E47A /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		EB8057022B9F147900A9E47A /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		EB8057042B9F1B6F00A9E47A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		EB8057062B9F3ECE00A9E47A /* NotesItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EB8057072B9F3ECE00A9E47A /* NotesItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotesItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		EB80570A2B9F428600A9E47A /* NotesSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSorter.swift; sourceTree = "<group>"; };
 		EB80570C2B9FD73F00A9E47A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EB80570E2B9FD80D00A9E47A /* HomeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchController.swift; sourceTree = "<group>"; };
+		EB80570E2B9FD80D00A9E47A /* NotesSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSearchController.swift; sourceTree = "<group>"; };
 		EB8057102B9FF45600A9E47A /* HomeViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Search.swift"; sourceTree = "<group>"; };
 		EB8057142BA0202C00A9E47A /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
 		EB80571A2BA0212B00A9E47A /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		EB80571B2BA0212B00A9E47A /* NoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
 		EB80571E2BA037D900A9E47A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB80571F2BA037D900A9E47A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EB8057222BA04E4F00A9E47A /* UIContextualAction+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContextualAction+Configuration.swift"; sourceTree = "<group>"; };
+		EB8057222BA04E4F00A9E47A /* UIContextualAction+ActionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContextualAction+ActionViewConfiguration.swift"; sourceTree = "<group>"; };
+		EB8057242BA060A400A9E47A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		EB8057262BA06B3700A9E47A /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		EB8057282BA06BE200A9E47A /* NoteDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsProtocols.swift; sourceTree = "<group>"; };
+		EB80572A2BA06BEF00A9E47A /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
+		EB80572C2BA06BF900A9E47A /* NoteDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsInteractor.swift; sourceTree = "<group>"; };
+		EB80572E2BA06C0000A9E47A /* NoteDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsPresenter.swift; sourceTree = "<group>"; };
+		EB8057302BA06C0800A9E47A /* NoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDataManager.swift; sourceTree = "<group>"; };
+		EB8057322BA06C1100A9E47A /* NoteDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsRouter.swift; sourceTree = "<group>"; };
+		EB8057342BA06C1900A9E47A /* NoteDetailsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailsBuilder.swift; sourceTree = "<group>"; };
+		EB8057392BA1619F00A9E47A /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		EB80573C2BA164E400A9E47A /* FavoritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
+		EB80573F2BA16ADB00A9E47A /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
+		EB8057422BA16FF300A9E47A /* FavoritesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBuilder.swift; sourceTree = "<group>"; };
+		EB8057452BA173A800A9E47A /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		EB8057482BA1751400A9E47A /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		EB80574B2BA1761200A9E47A /* FavoritesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataManager.swift; sourceTree = "<group>"; };
+		EB80574E2BA177CF00A9E47A /* FavoritesViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController+Search.swift"; sourceTree = "<group>"; };
+		EB8057502BA1783200A9E47A /* FvoritesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FvoritesViewController+TableView.swift"; sourceTree = "<group>"; };
+		EB8057522BA183CF00A9E47A /* Array+SortByFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SortByFavorites.swift"; sourceTree = "<group>"; };
 		EBA3CF5B2B9F03D3004201B0 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA3CF5E2B9F03D3004201B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA3CF682B9F03D3004201B0 /* NotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesApp.xcdatamodel; sourceTree = "<group>"; };
@@ -129,8 +163,6 @@
 		EB8056DD2B9F0C9000A9E47A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				EB8056DF2B9F0CB400A9E47A /* NoteCell */,
-				EB8056DE2B9F0CA500A9E47A /* NoteDisplayModel */,
 				EB8057022B9F147900A9E47A /* HomeDataManager.swift */,
 			);
 			path = Entities;
@@ -167,8 +199,8 @@
 			children = (
 				EB8056EB2B9F104F00A9E47A /* Date+Formatter.swift */,
 				EB8056ED2B9F115900A9E47A /* UITableView+Extensions.swift */,
-				EB8056EF2B9F118300A9E47A /* Storyboard+Extension.swift */,
-				EB8057222BA04E4F00A9E47A /* UIContextualAction+Configuration.swift */,
+				EB8057222BA04E4F00A9E47A /* UIContextualAction+ActionViewConfiguration.swift */,
+				EB8057522BA183CF00A9E47A /* Array+SortByFavorites.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +208,7 @@
 		EB8056F12B9F122400A9E47A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057262BA06B3700A9E47A /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -184,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				EB8057042B9F1B6F00A9E47A /* HomePresenter.swift */,
-				EB80570A2B9F428600A9E47A /* NotesSorter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -192,6 +224,7 @@
 		EB8056F32B9F125300A9E47A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057242BA060A400A9E47A /* HomeInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -200,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				EB80570C2B9FD73F00A9E47A /* HomeViewController.swift */,
-				EB80570E2B9FD80D00A9E47A /* HomeSearchController.swift */,
 				EB8057102B9FF45600A9E47A /* HomeViewController+Search.swift */,
 				EB8057142BA0202C00A9E47A /* HomeViewController+TableView.swift */,
 			);
@@ -226,6 +258,7 @@
 		EB8056F72B9F12BC00A9E47A /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057342BA06C1900A9E47A /* NoteDetailsBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -233,6 +266,7 @@
 		EB8056F82B9F12D800A9E47A /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057322BA06C1100A9E47A /* NoteDetailsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -240,6 +274,7 @@
 		EB8056F92B9F12E000A9E47A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057302BA06C0800A9E47A /* NoteDataManager.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -247,6 +282,7 @@
 		EB8056FA2B9F12EC00A9E47A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				EB80572E2BA06C0000A9E47A /* NoteDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -254,6 +290,7 @@
 		EB8056FB2B9F12FB00A9E47A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				EB80572C2BA06BF900A9E47A /* NoteDetailsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -261,6 +298,7 @@
 		EB8056FC2B9F130200A9E47A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB80572A2BA06BEF00A9E47A /* NoteDetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,8 +306,99 @@
 		EB8056FD2B9F130B00A9E47A /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057282BA06BE200A9E47A /* NoteDetailsProtocols.swift */,
 			);
 			path = Contracts;
+			sourceTree = "<group>";
+		};
+		EB8057362BA12D5100A9E47A /* FavoriteScene */ = {
+			isa = PBXGroup;
+			children = (
+				EB80573B2BA164CC00A9E47A /* Contracts */,
+				EB8057372BA12D6700A9E47A /* View */,
+				EB8057472BA174FE00A9E47A /* Interactor */,
+				EB8057442BA1739400A9E47A /* Presenter */,
+				EB80574A2BA175FB00A9E47A /* Entities */,
+				EB80573E2BA16A8900A9E47A /* Router */,
+				EB8057412BA16FD400A9E47A /* Builder */,
+			);
+			path = FavoriteScene;
+			sourceTree = "<group>";
+		};
+		EB8057372BA12D6700A9E47A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057392BA1619F00A9E47A /* FavoritesViewController.swift */,
+				EB80574E2BA177CF00A9E47A /* FavoritesViewController+Search.swift */,
+				EB8057502BA1783200A9E47A /* FvoritesViewController+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB80573B2BA164CC00A9E47A /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				EB80573C2BA164E400A9E47A /* FavoritesProtocols.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		EB80573E2BA16A8900A9E47A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EB80573F2BA16ADB00A9E47A /* FavoritesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EB8057412BA16FD400A9E47A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057422BA16FF300A9E47A /* FavoritesBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		EB8057442BA1739400A9E47A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057452BA173A800A9E47A /* FavoritesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EB8057472BA174FE00A9E47A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057482BA1751400A9E47A /* FavoritesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EB80574A2BA175FB00A9E47A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EB80574B2BA1761200A9E47A /* FavoritesDataManager.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EB8057562BA19B6600A9E47A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EB80570E2B9FD80D00A9E47A /* NotesSearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EB8057572BA1A09600A9E47A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EB8056DF2B9F0CB400A9E47A /* NoteCell */,
+				EB8056DE2B9F0CA500A9E47A /* NoteDisplayModel */,
+				EB8057562BA19B6600A9E47A /* Search */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		EBA3CF522B9F03D3004201B0 = {
@@ -321,8 +450,9 @@
 		EBA3CF912B9F0423004201B0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				EB8056EA2B9F103B00A9E47A /* Extensions */,
 				EBA3CF942B9F043C004201B0 /* App */,
+				EB8057572BA1A09600A9E47A /* Entities */,
+				EB8056EA2B9F103B00A9E47A /* Extensions */,
 				EBA3CF932B9F0432004201B0 /* CoreData */,
 				EBA3CF952B9F0446004201B0 /* Storyboards */,
 				EBA3CF6F2B9F03D4004201B0 /* Info.plist */,
@@ -335,6 +465,7 @@
 			children = (
 				EBA3CF962B9F04B0004201B0 /* HomeScene */,
 				EBA3CF972B9F04BD004201B0 /* NoteScene */,
+				EB8057362BA12D5100A9E47A /* FavoriteScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -538,27 +669,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB8057232BA04E4F00A9E47A /* UIContextualAction+Configuration.swift in Sources */,
+				EB8057232BA04E4F00A9E47A /* UIContextualAction+ActionViewConfiguration.swift in Sources */,
+				EB80572D2BA06BF900A9E47A /* NoteDetailsInteractor.swift in Sources */,
 				EB8057152BA0202C00A9E47A /* HomeViewController+TableView.swift in Sources */,
+				EB80572B2BA06BEF00A9E47A /* NoteDetailsViewController.swift in Sources */,
 				EB8056EC2B9F104F00A9E47A /* Date+Formatter.swift in Sources */,
+				EB8057252BA060A400A9E47A /* HomeInteractor.swift in Sources */,
 				EB8056FF2B9F133600A9E47A /* HomeBuilder.swift in Sources */,
 				EBA3CF5F2B9F03D3004201B0 /* AppDelegate.swift in Sources */,
-				EB8056F02B9F118300A9E47A /* Storyboard+Extension.swift in Sources */,
+				EB80574C2BA1761200A9E47A /* FavoritesDataManager.swift in Sources */,
 				EB8057012B9F143400A9E47A /* HomeProtocols.swift in Sources */,
 				EB80570D2B9FD73F00A9E47A /* HomeViewController.swift in Sources */,
-				EB80570F2B9FD80D00A9E47A /* HomeSearchController.swift in Sources */,
+				EB80570F2B9FD80D00A9E47A /* NotesSearchController.swift in Sources */,
+				EB8057492BA1751400A9E47A /* FavoritesInteractor.swift in Sources */,
 				EB8056E42B9F0FA800A9E47A /* CoreDataManager.swift in Sources */,
 				EB8056DC2B9F0C4500A9E47A /* StorageManagerProtocol.swift in Sources */,
 				EBA3CF692B9F03D3004201B0 /* NotesApp.xcdatamodeld in Sources */,
+				EB8057432BA16FF300A9E47A /* FavoritesBuilder.swift in Sources */,
+				EB8057402BA16ADB00A9E47A /* FavoritesRouter.swift in Sources */,
+				EB8057312BA06C0800A9E47A /* NoteDataManager.swift in Sources */,
 				EB8057032B9F147900A9E47A /* HomeDataManager.swift in Sources */,
+				EB8057332BA06C1100A9E47A /* NoteDetailsRouter.swift in Sources */,
+				EB8057272BA06B3700A9E47A /* HomeRouter.swift in Sources */,
 				EB8056EE2B9F115900A9E47A /* UITableView+Extensions.swift in Sources */,
+				EB80572F2BA06C0000A9E47A /* NoteDetailsPresenter.swift in Sources */,
+				EB80573D2BA164E400A9E47A /* FavoritesProtocols.swift in Sources */,
 				EB80571C2BA0212B00A9E47A /* NoteCell.swift in Sources */,
+				EB8057352BA06C1900A9E47A /* NoteDetailsBuilder.swift in Sources */,
 				EB8057082B9F3ECE00A9E47A /* NotesItem+CoreDataClass.swift in Sources */,
 				EB8057092B9F3ECE00A9E47A /* NotesItem+CoreDataProperties.swift in Sources */,
 				EB8056E82B9F0FFE00A9E47A /* NoteDisplayModel.swift in Sources */,
+				EB8057512BA1783200A9E47A /* FvoritesViewController+TableView.swift in Sources */,
+				EB8057292BA06BE200A9E47A /* NoteDetailsProtocols.swift in Sources */,
 				EB8057112B9FF45600A9E47A /* HomeViewController+Search.swift in Sources */,
+				EB8057462BA173A800A9E47A /* FavoritesPresenter.swift in Sources */,
+				EB80574F2BA177CF00A9E47A /* FavoritesViewController+Search.swift in Sources */,
+				EB80573A2BA1619F00A9E47A /* FavoritesViewController.swift in Sources */,
 				EB8056E22B9F0CE600A9E47A /* NoteModelProtocol.swift in Sources */,
-				EB80570B2B9F428600A9E47A /* NotesSorter.swift in Sources */,
+				EB8057532BA183CF00A9E47A /* Array+SortByFavorites.swift in Sources */,
 				EB8056E62B9F0FD400A9E47A /* NoteModelDataAdapter.swift in Sources */,
 				EB8057052B9F1B6F00A9E47A /* HomePresenter.swift in Sources */,
 			);

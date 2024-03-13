@@ -16,20 +16,27 @@ struct Notes {
         }
 
         struct ViewModel {
-            var common: [NoteModelProtocol]?
-            var favorite: [NoteModelProtocol]?
+            var notes: [NoteModelProtocol]?
         }
+    }
+    
+    enum GoToFavorites {
+        struct Request {
+            var navigationController: Any?
+        }
+
+        struct Response {}
+        
+        struct ViewModel {}
     }
 
     enum PassNoteDetails {
         struct Request {
             var navigationController: Any?
-            var homeViewControllerDelegate: Any?
             var selectedNote: NoteModelProtocol?
         }
 
         struct Response {
-            var homeViewControllerDelegate: Any?
             var selectedNote: NoteModelProtocol?
         }
 

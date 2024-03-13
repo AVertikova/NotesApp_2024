@@ -20,10 +20,10 @@ class HomeBuilder {
             let interactor: HomeInteractorPropertiesProtocol &
             HomePresenterToInteractorRequestProtocol = HomeInteractor()
             let router: HomePresenterToRouterRequestProtocol &
-            HomeAddOrUpdateActionDelegate = HomeRouter()
+            HomeActionsDelegate = HomeRouter()
 
             homeViewController.presenter = presenter
-            homeViewController.noteAddOrUpdateDelegate = router
+            homeViewController.actionsDelegate = router
             presenter.viewController = homeViewController
             presenter.router = router
             presenter.interactor = interactor

@@ -12,5 +12,6 @@ protocol StorageManagerProtocol {
     func updateNotesList() -> [NoteModelProtocol]
     func saveNote(noteToSave: NoteModelProtocol)
     func updateNote(oldValue: NoteModelProtocol, newValue: NoteModelProtocol)
+    func favoriteStatusUpdate(noteToUpdate: NoteModelProtocol)
     func removeNote(noteToRemove: NoteModelProtocol)
 }

@@ -1,5 +1,5 @@
 //
-//  HomeSearchController.swift
+//  NotesSearchController.swift
 //  NotesApp
 //
 //  Created by Анна Вертикова on 12.03.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeSearchController: UISearchController {
+class NotesSearchController: UISearchController {
     var filteredNotes: [NoteModelProtocol]?
     var isSearchBarEmpty: Bool {
       return self.searchBar.text?.isEmpty ?? true

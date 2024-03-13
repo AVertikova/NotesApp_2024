@@ -118,6 +118,46 @@
             </objects>
             <point key="canvasLocation" x="1347" y="-275"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="gBL-t0-hF9">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" title="Favorites" id="0EP-oD-fNn" userLabel="Favorites" customClass="FavoritesViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BwW-Ah-BBW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-JQ-SsT">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0EP-oD-fNn" id="0zd-7r-Qpc"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vOL-bo-yeR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4QA-hO-6ao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4QA-hO-6ao" firstAttribute="trailing" secondItem="vOL-bo-yeR" secondAttribute="trailing" id="83Z-AS-zjE"/>
+                            <constraint firstItem="4QA-hO-6ao" firstAttribute="bottom" secondItem="vOL-bo-yeR" secondAttribute="bottom" id="Ahx-ET-JfU"/>
+                            <constraint firstItem="vOL-bo-yeR" firstAttribute="leading" secondItem="4QA-hO-6ao" secondAttribute="leading" id="Nn9-63-M9o"/>
+                            <constraint firstItem="vOL-bo-yeR" firstAttribute="top" secondItem="4QA-hO-6ao" secondAttribute="top" id="tvb-YB-iOh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="2eU-jM-5bZ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="vOL-bo-yeR" id="T4k-VU-beN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6d9-Y6-par" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2178" y="-275"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>

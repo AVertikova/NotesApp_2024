@@ -1,5 +1,5 @@
 //
-//  UIContextualAction+Configuration.swift
+//  UIContextualAction+ActionViewConfiguration.swift
 //  NotesApp
 //
 //  Created by Анна Вертикова on 12.03.2024.

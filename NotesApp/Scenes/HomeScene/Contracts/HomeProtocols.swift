@@ -10,23 +10,17 @@ import UIKit
 
 // MARK: Home Properties protocols
 
-protocol UpdateHomeViewActionDelegate: AnyObject {
-    func updateView()
-}
-
-protocol UpdateHomeViewDelegatePropertyProtocol: AnyObject {
-    var backToHomeViewDelegate: UpdateHomeViewActionDelegate? {get set}
+protocol HomeActionsDelegate: AnyObject {
+    func didTapFavorites(request: Notes.GoToFavorites.Request)
+    func didSelectOrAddNote(request: Notes.PassNoteDetails.Request)
 }
 
 protocol HomeViewPropertiesProtocol: AnyObject {
     var presenter: HomeViewToPresenterRequestProtocol? { get set }
 }
-protocol HomeAddOrUpdateActionDelegate: AnyObject {
-    func didSelectOrAddNote(request: Notes.PassNoteDetails.Request)
-}
 
 protocol HomeViewDelegatePropertyProtocol: AnyObject {
-    var noteAddOrUpdateDelegate: HomeAddOrUpdateActionDelegate? {get set}
+    var actionsDelegate: HomeActionsDelegate? {get set}
 }
 
 protocol HomePresenterPropertiesProtocol: AnyObject {
@@ -43,8 +37,9 @@ protocol HomeInteractorPropertiesProtocol: AnyObject {
 // MARK: Home Interaction protocols
 
 protocol HomeViewToPresenterRequestProtocol: AnyObject {
-    func viewDidLoad()
+    func viewWillAppear()
     func removeNoteAction(request: Notes.PassNoteDetails.Request)
+    func favoriteStatusChanged(request: Notes.PassNoteDetails.Request)
 }
 
 protocol HomePresenterToViewResponseProtocol: AnyObject {
@@ -54,6 +49,7 @@ protocol HomePresenterToViewResponseProtocol: AnyObject {
 protocol HomePresenterToInteractorRequestProtocol: AnyObject {
     func fetchNotesList(request: Notes.GetNotesData.Request)
     func removeNote(request: Notes.PassNoteDetails.Request)
+    func favoriteStatusUpdate(request: Notes.PassNoteDetails.Request) 
 }
 
 protocol HomeInteractorToPresenterResponseProtocol: AnyObject {
@@ -61,5 +57,6 @@ protocol HomeInteractorToPresenterResponseProtocol: AnyObject {
 }
 
 protocol HomePresenterToRouterRequestProtocol: AnyObject {
+    func pushToFavoritesScene(with request: Notes.GoToFavorites.Request) 
     func pushToNoteDetailsScene(with request: Notes.PassNoteDetails.Request)
 }

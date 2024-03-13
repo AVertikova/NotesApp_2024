@@ -58,7 +58,7 @@ class CoreDataManager: StorageManagerProtocol {
         let fetchRequest = NSFetchRequest<NotesItem>(entityName: entityName)
         do {
             let results = try context.fetch(fetchRequest)
-            if results.isEmpty {
+            if results.isEmpty || !results.contains(where: {$0.favorite == false}) {
                 return [defaultNote]
             }
             return dataAdapter.mapData(results)
@@ -85,7 +85,7 @@ class CoreDataManager: StorageManagerProtocol {
                 try context.save()
             } catch {
                 let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                fatalError("Unresolved error occured while saving context.  \(nserror), \(nserror.userInfo)")
             }
         }
     }
@@ -121,9 +121,28 @@ class CoreDataManager: StorageManagerProtocol {
             }
             
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not update item. \(error), \(error.userInfo)")
         }
     }
+    
+    func favoriteStatusUpdate(noteToUpdate: NoteModelProtocol) {
+        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NotesItem>(entityName: entityName)
+        fetchRequest.predicate = NSPredicate(format: Filter.byId.rawValue, noteToUpdate.id as CVarArg)
+        
+        do {
+            let items = try context.fetch(fetchRequest)
+            for item in items {
+                item.favorite = noteToUpdate.favorite
+                let model: NoteDisplayModel = NoteDisplayModel(with: item)
+                context.delete(item)
+                self.saveNote(noteToSave: model)
+            }
+        } catch let error as NSError {
+            print("Could not change item's favorite status. \(error), \(error.userInfo)")
+        }
+    }
+    
     
     func removeNote(noteToRemove: NoteModelProtocol) {
         defer {self.saveContext()}
@@ -137,7 +156,7 @@ class CoreDataManager: StorageManagerProtocol {
                 context.delete(item)
             }
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not delete item. \(error), \(error.userInfo)")
         }
     }
 }
