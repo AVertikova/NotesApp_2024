@@ -52,19 +52,22 @@ class CoreDataManager: StorageManagerProtocol {
     
     private init() {}
     
-    
     func fetchNotesList() -> [NoteModelProtocol] {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NotesItem>(entityName: entityName)
         do {
             let results = try context.fetch(fetchRequest)
-            if results.isEmpty || !results.contains(where: {$0.favorite == false}) {
+            if results.isEmpty {
                 return [defaultNote]
             }
             return dataAdapter.mapData(results)
         } catch _ {
             return [NoteModelProtocol]()
         }
+    }
+    
+    func fetchFavoritesList() -> [NoteModelProtocol] {
+        self.updateNotesList()
     }
     
     func updateNotesList() -> [NoteModelProtocol] {
@@ -119,9 +122,8 @@ class CoreDataManager: StorageManagerProtocol {
                 context.delete(item)
                 self.saveNote(noteToSave: model)
             }
-            
         } catch let error as NSError {
-            print("Could not update item. \(error), \(error.userInfo)")
+            fatalError("Could not update item. \(error), \(error.userInfo)")
         }
     }
     
@@ -139,7 +141,7 @@ class CoreDataManager: StorageManagerProtocol {
                 self.saveNote(noteToSave: model)
             }
         } catch let error as NSError {
-            print("Could not change item's favorite status. \(error), \(error.userInfo)")
+            fatalError("Could not change item's favorite status. \(error), \(error.userInfo)")
         }
     }
     
@@ -156,7 +158,7 @@ class CoreDataManager: StorageManagerProtocol {
                 context.delete(item)
             }
         } catch let error as NSError {
-            print("Could not delete item. \(error), \(error.userInfo)")
+            fatalError("Could not delete item. \(error), \(error.userInfo)")
         }
     }
 }

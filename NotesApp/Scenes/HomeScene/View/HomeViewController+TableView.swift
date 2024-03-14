@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-enum ActionImage: String {
-    case remove = "trash"
-    case addToFavorites = "heart"
-    case removeFromFavorites = "heart.fill"
-}
-
 extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
     
     func setupTableView() {
@@ -105,7 +99,7 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
         
         let currentSource: [NoteModelProtocol]? = self.searchController.isSearching ? self.searchController.filteredNotes : self.dataSourceNotes
         if (currentSource?[indexPath.row]) != nil {
-            addToFavoriteAction.configureActionView(with: .addToFavorites)
+            addToFavoriteAction.configureActionView(with: .favoriteIsFalse)
             }
         
         return addToFavoriteAction
@@ -127,7 +121,4 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
     private func updateFavoritesLocal(at indexPath: IndexPath) {
         self.removeNoteLocal(at: indexPath)
     }
-    
-    
-
 }

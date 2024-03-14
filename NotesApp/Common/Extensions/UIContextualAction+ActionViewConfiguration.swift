@@ -7,17 +7,21 @@
 
 import UIKit
 
+enum ActionImage: String {
+    case remove = "trash"
+    case favoriteIsFalse = "star"
+    case favoriteIsTrue = "star.fill"
+}
+
 extension UIContextualAction {
     func configureActionView(with imageName: ActionImage) {
+        self.image = UIImage(systemName: imageName.rawValue)
         switch imageName {
         case .remove:
-            self.image = UIImage(systemName: ActionImage.remove.rawValue)
             self.backgroundColor = .systemRed
-        case .addToFavorites:
-            self.image = UIImage(systemName: ActionImage.addToFavorites.rawValue)
+        case .favoriteIsFalse:
             self.backgroundColor = .systemYellow
-        case .removeFromFavorites:
-            self.image = UIImage(systemName: ActionImage.removeFromFavorites.rawValue)
+        case .favoriteIsTrue:
             self.backgroundColor = .systemYellow
         }
         

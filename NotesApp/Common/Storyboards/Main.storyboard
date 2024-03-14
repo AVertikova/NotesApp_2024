@@ -40,7 +40,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Notes" id="Cx1-Qv-iJe">
-                        <barButtonItem key="leftBarButtonItem" title="favorite" image="heart" catalog="system" id="2mx-Up-wMu">
+                        <barButtonItem key="leftBarButtonItem" title="favorite" image="star" catalog="system" id="2mx-Up-wMu">
                             <connections>
                                 <action selector="favoriteButtonTapped:" destination="f7o-P3-OJQ" id="SrA-ZS-xgV"/>
                             </connections>
@@ -69,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-Wi-PCW">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Note title" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-Wi-PCW">
                                 <rect key="frame" x="16" y="119" width="361" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="LU1-Y4-Qr2"/>
@@ -77,7 +77,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Nam liber te conscient to factor tum poen legum odioque civiuda." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4R-vW-152">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note body" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4R-vW-152">
                                 <rect key="frame" x="16" y="193" width="361" height="285"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -100,7 +100,7 @@
                             <constraint firstItem="JXL-Wi-PCW" firstAttribute="leading" secondItem="I0s-9o-v0M" secondAttribute="leading" constant="16" id="eet-3u-rOg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Note" id="BB8-yv-hd7">
+                    <navigationItem key="navigationItem" title="Add new note" id="BB8-yv-hd7">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="jd6-YQ-bD2">
                             <connections>
                                 <action selector="saveNoteButtonTapped:" destination="5ND-al-5mT" id="3Ml-WD-J5f"/>
@@ -160,7 +160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

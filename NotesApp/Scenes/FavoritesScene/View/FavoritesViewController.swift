@@ -24,6 +24,7 @@ class FavoritesViewController: UIViewController, FavoritesViewPropertiesProtocol
         super.viewDidLoad()
         self.setupSearchController()
         self.setupTableView()
+        presenter?.viewDidLoad()
     }
     
 }

@@ -15,8 +15,7 @@ extension HomeViewController:  UISearchResultsUpdating {
     
     private func filterNotes(_ searchText: String) {
         searchController.filteredNotes = (dataSourceNotes?.filter({(note: NoteModelProtocol) -> Bool in
-            return note.body?.lowercased().contains(searchText.lowercased()) ?? false || 
-                   note.title?.lowercased().contains(searchText.lowercased()) ?? false }))!
+            return note.contains(text: searchText) }))!
         notesTableView.reloadData()
     }
     

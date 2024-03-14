@@ -14,4 +14,6 @@ protocol NoteModelProtocol {
     var title: String? {get set}
     var body: String? {get set}
     var favorite: Bool {get set}
+    func contains(text: String) -> Bool
 }
+

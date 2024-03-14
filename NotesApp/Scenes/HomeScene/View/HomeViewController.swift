@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, HomeViewPropertiesProtocol, HomeView
         super.viewDidLoad()
         self.setupSearchController()
         self.setupTableView()
-       
+        presenter?.viewDidLoad()
     }
     
     @IBAction func newNoteButtonTapped(_ sender: Any) {
@@ -41,8 +41,6 @@ class HomeViewController: UIViewController, HomeViewPropertiesProtocol, HomeView
             actionsDelegate?.didTapFavorites(request: request)
         }
     }
-        
-    
 }
 
 extension HomeViewController: HomePresenterToViewResponseProtocol {
@@ -52,5 +50,4 @@ extension HomeViewController: HomePresenterToViewResponseProtocol {
             self.notesTableView.reloadData()
         }
     }
-    
 }

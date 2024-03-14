@@ -33,6 +33,7 @@ protocol FavoritesInteractorPropertiesProtocol: AnyObject {
 
 protocol FavoritesViewToPresenterRequestProtocol: AnyObject {
     func viewWillAppear()
+    func viewDidLoad()
     func removeNoteAction(request: Notes.PassNoteDetails.Request)
     func favoriteStatusChanged(request: Notes.PassNoteDetails.Request)
 }
@@ -43,6 +44,7 @@ protocol FavoritesPresenterToViewResponseProtocol: AnyObject {
 
 protocol FavoritesPresenterToInteractorRequestProtocol: AnyObject {
     func fetchFavoritesList(request: Favorites.GetFavoritesData.Request)
+    func updateFavoritesList(request: Favorites.GetFavoritesData.Request)
     func removeNote(request: Notes.PassNoteDetails.Request)
     func favoriteStatusUpdate(request: Notes.PassNoteDetails.Request)
 }

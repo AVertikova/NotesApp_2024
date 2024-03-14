@@ -11,13 +11,16 @@ class FavoritesPresenter: FavoritesPresenterPropertiesProtocol {
     var viewController: FavoritesPresenterToViewResponseProtocol?
     var interactor: FavoritesPresenterToInteractorRequestProtocol?
     var router: FavoritesPresenterToRouterRequestProtocol?
-
-    
-    
 }
 
 extension FavoritesPresenter: FavoritesViewToPresenterRequestProtocol {
+   
     func viewWillAppear() {
+        let request = Favorites.GetFavoritesData.Request()
+        interactor?.updateFavoritesList(request: request)
+    }
+    
+    func viewDidLoad() {
         let request = Favorites.GetFavoritesData.Request()
         interactor?.fetchFavoritesList(request: request)
     }
@@ -29,8 +32,6 @@ extension FavoritesPresenter: FavoritesViewToPresenterRequestProtocol {
     func favoriteStatusChanged(request: Notes.PassNoteDetails.Request) {
         interactor?.favoriteStatusUpdate(request: request)
     }
-    
-    
 }
 
 extension FavoritesPresenter: FavoritesInteractorToPresenterResponseProtocol {
@@ -41,6 +42,4 @@ extension FavoritesPresenter: FavoritesInteractorToPresenterResponseProtocol {
             viewController?.displayNotes(viewModel: viewModel)
         }
     }
-    
-    
 }

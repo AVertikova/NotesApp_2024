@@ -16,10 +16,15 @@ class HomePresenter: HomePresenterPropertiesProtocol {
 }
 
 extension HomePresenter: HomeViewToPresenterRequestProtocol {
+    func viewDidLoad() {
+        let request = Notes.GetNotesData.Request()
+        interactor?.fetchNotesList(request: request)
+    }
+    
     
     func viewWillAppear() {
         let request = Notes.GetNotesData.Request()
-        interactor?.fetchNotesList(request: request)
+        interactor?.updateNotesList(request: request)
     }
 
     func removeNoteAction(request: Notes.PassNoteDetails.Request) {
@@ -29,8 +34,6 @@ extension HomePresenter: HomeViewToPresenterRequestProtocol {
     func favoriteStatusChanged(request: Notes.PassNoteDetails.Request) {
         interactor?.favoriteStatusUpdate(request: request)
     }
-    
-    
 }
 
 extension HomePresenter: HomeInteractorToPresenterResponseProtocol {

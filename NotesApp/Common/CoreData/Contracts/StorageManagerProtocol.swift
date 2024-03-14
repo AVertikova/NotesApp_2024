@@ -9,6 +9,7 @@ import Foundation
 
 protocol StorageManagerProtocol {
     func fetchNotesList() -> [NoteModelProtocol]
+    func fetchFavoritesList() -> [NoteModelProtocol]
     func updateNotesList() -> [NoteModelProtocol]
     func saveNote(noteToSave: NoteModelProtocol)
     func updateNote(oldValue: NoteModelProtocol, newValue: NoteModelProtocol)

@@ -42,4 +42,11 @@ struct NoteDisplayModel: NoteModelProtocol {
                   body: entity.body ?? " ",
                   favorite: entity.favorite)
     }
+    
+    func contains(text: String) -> Bool {
+              return self.body?.lowercased().contains(text.lowercased()) ?? false ||
+                     self.title?.lowercased().contains(text.lowercased()) ?? false
+    }
 }
+
+

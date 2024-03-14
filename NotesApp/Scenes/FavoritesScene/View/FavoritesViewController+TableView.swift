@@ -1,5 +1,5 @@
 //
-//  FvoritesViewController+TableView.swift
+//  FavoritesViewController+TableView.swift
 //  NotesApp
 //
 //  Created by Анна Вертикова on 13.03.2024.
@@ -100,7 +100,7 @@ extension FavoritesViewController: UITableViewDelegate & UITableViewDataSource {
         
         let currentSource: [NoteModelProtocol]? = self.searchController.isSearching ? self.searchController.filteredNotes : self.dataSourceNotes
         if (currentSource?[indexPath.row]) != nil {
-            removeFromFavoritesAction.configureActionView(with: .removeFromFavorites)
+            removeFromFavoritesAction.configureActionView(with: .favoriteIsTrue)
             }
         
         return removeFromFavoritesAction

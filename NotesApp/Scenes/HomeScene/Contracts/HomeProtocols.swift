@@ -38,6 +38,7 @@ protocol HomeInteractorPropertiesProtocol: AnyObject {
 
 protocol HomeViewToPresenterRequestProtocol: AnyObject {
     func viewWillAppear()
+    func viewDidLoad()
     func removeNoteAction(request: Notes.PassNoteDetails.Request)
     func favoriteStatusChanged(request: Notes.PassNoteDetails.Request)
 }
@@ -48,6 +49,7 @@ protocol HomePresenterToViewResponseProtocol: AnyObject {
 
 protocol HomePresenterToInteractorRequestProtocol: AnyObject {
     func fetchNotesList(request: Notes.GetNotesData.Request)
+    func updateNotesList(request: Notes.GetNotesData.Request)
     func removeNote(request: Notes.PassNoteDetails.Request)
     func favoriteStatusUpdate(request: Notes.PassNoteDetails.Request) 
 }

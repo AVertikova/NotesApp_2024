@@ -15,10 +15,16 @@ class HomeInteractor: HomeInteractorPropertiesProtocol {
 }
 
 extension HomeInteractor: HomePresenterToInteractorRequestProtocol {
-    
+   
     func fetchNotesList(request: Notes.GetNotesData.Request) {
         var response = Notes.GetNotesData.Response()
         response.notes = storageManager?.fetchNotesList()
+        presenter?.presentFetchedNotes(response: response)
+    }
+    
+    func updateNotesList(request: Notes.GetNotesData.Request) {
+        var response = Notes.GetNotesData.Response()
+        response.notes = storageManager?.updateNotesList()
         presenter?.presentFetchedNotes(response: response)
     }
     
@@ -26,20 +32,11 @@ extension HomeInteractor: HomePresenterToInteractorRequestProtocol {
         if let selectedNote = request.selectedNote {
             storageManager?.removeNote(noteToRemove: selectedNote)
         }
-        self.updateNotesList()
     }
     
     func favoriteStatusUpdate(request: Notes.PassNoteDetails.Request) {
         if let selectedNote = request.selectedNote {
             storageManager?.favoriteStatusUpdate(noteToUpdate: selectedNote)
         }
-        self.updateNotesList()
-    }
-    
-    
-    private func updateNotesList() {
-        var response = Notes.GetNotesData.Response()
-        response.notes = storageManager?.updateNotesList()
-        presenter?.presentFetchedNotes(response: response)
     }
 }

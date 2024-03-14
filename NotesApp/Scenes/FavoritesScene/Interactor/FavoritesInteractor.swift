@@ -13,9 +13,16 @@ class FavoritesInteractor: FavoritesInteractorPropertiesProtocol {
 }
 
 extension FavoritesInteractor: FavoritesPresenterToInteractorRequestProtocol {
+    
     func fetchFavoritesList(request: Favorites.GetFavoritesData.Request) {
         var response = Favorites.GetFavoritesData.Response()
-        response.notes = storageManager?.fetchNotesList()
+        response.notes = storageManager?.fetchFavoritesList()
+        presenter?.presentFetchedFavorites(response: response)
+    }
+    
+    func updateFavoritesList(request: Favorites.GetFavoritesData.Request) {
+        var response = Favorites.GetFavoritesData.Response()
+        response.notes = storageManager?.updateNotesList()
         presenter?.presentFetchedFavorites(response: response)
     }
     
@@ -23,19 +30,11 @@ extension FavoritesInteractor: FavoritesPresenterToInteractorRequestProtocol {
         if let selectedNote = request.selectedNote {
             storageManager?.removeNote(noteToRemove: selectedNote)
         }
-        self.updateFavoritesList()
     }
     
     func favoriteStatusUpdate(request: Notes.PassNoteDetails.Request) {
         if let selectedNote = request.selectedNote {
             storageManager?.favoriteStatusUpdate(noteToUpdate: selectedNote)
         }
-        self.updateFavoritesList()
-    }
-    
-    private func updateFavoritesList() {
-        var response = Favorites.GetFavoritesData.Response()
-        response.notes = storageManager?.updateNotesList()
-        presenter?.presentFetchedFavorites(response: response)
     }
 }

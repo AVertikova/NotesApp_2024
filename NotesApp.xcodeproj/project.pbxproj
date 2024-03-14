@@ -46,8 +46,13 @@
 		EB8057492BA1751400A9E47A /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057482BA1751400A9E47A /* FavoritesInteractor.swift */; };
 		EB80574C2BA1761200A9E47A /* FavoritesDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80574B2BA1761200A9E47A /* FavoritesDataManager.swift */; };
 		EB80574F2BA177CF00A9E47A /* FavoritesViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80574E2BA177CF00A9E47A /* FavoritesViewController+Search.swift */; };
-		EB8057512BA1783200A9E47A /* FvoritesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057502BA1783200A9E47A /* FvoritesViewController+TableView.swift */; };
+		EB8057512BA1783200A9E47A /* FavoritesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057502BA1783200A9E47A /* FavoritesViewController+TableView.swift */; };
 		EB8057532BA183CF00A9E47A /* Array+SortByFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057522BA183CF00A9E47A /* Array+SortByFavorites.swift */; };
+		EB80575F2BA1F38300A9E47A /* StorageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80575D2BA1F38300A9E47A /* StorageManagerTests.swift */; };
+		EB8057672BA1F3C900A9E47A /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057602BA1F3C900A9E47A /* HomeViewControllerTests.swift */; };
+		EB8057682BA1F3C900A9E47A /* NoteDisplayModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8057622BA1F3C900A9E47A /* NoteDisplayModelTests.swift */; };
+		EB80576D2BA336FC00A9E47A /* FavoritesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80576C2BA336FC00A9E47A /* FavoritesViewControllerTests.swift */; };
+		EB8057702BA33C7900A9E47A /* NoteDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80576F2BA33C7900A9E47A /* NoteDetailsViewControllerTests.swift */; };
 		EBA3CF5F2B9F03D3004201B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF5E2B9F03D3004201B0 /* AppDelegate.swift */; };
 		EBA3CF692B9F03D3004201B0 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF672B9F03D3004201B0 /* NotesApp.xcdatamodeld */; };
 		EBA3CF6B2B9F03D4004201B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA3CF6A2B9F03D4004201B0 /* Assets.xcassets */; };
@@ -113,8 +118,13 @@
 		EB8057482BA1751400A9E47A /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		EB80574B2BA1761200A9E47A /* FavoritesDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataManager.swift; sourceTree = "<group>"; };
 		EB80574E2BA177CF00A9E47A /* FavoritesViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController+Search.swift"; sourceTree = "<group>"; };
-		EB8057502BA1783200A9E47A /* FvoritesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FvoritesViewController+TableView.swift"; sourceTree = "<group>"; };
+		EB8057502BA1783200A9E47A /* FavoritesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesViewController+TableView.swift"; sourceTree = "<group>"; };
 		EB8057522BA183CF00A9E47A /* Array+SortByFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SortByFavorites.swift"; sourceTree = "<group>"; };
+		EB80575D2BA1F38300A9E47A /* StorageManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManagerTests.swift; sourceTree = "<group>"; };
+		EB8057602BA1F3C900A9E47A /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		EB8057622BA1F3C900A9E47A /* NoteDisplayModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDisplayModelTests.swift; sourceTree = "<group>"; };
+		EB80576C2BA336FC00A9E47A /* FavoritesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewControllerTests.swift; sourceTree = "<group>"; };
+		EB80576F2BA33C7900A9E47A /* NoteDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		EBA3CF5B2B9F03D3004201B0 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA3CF5E2B9F03D3004201B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBA3CF682B9F03D3004201B0 /* NotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesApp.xcdatamodel; sourceTree = "<group>"; };
@@ -311,7 +321,7 @@
 			path = Contracts;
 			sourceTree = "<group>";
 		};
-		EB8057362BA12D5100A9E47A /* FavoriteScene */ = {
+		EB8057362BA12D5100A9E47A /* FavoritesScene */ = {
 			isa = PBXGroup;
 			children = (
 				EB80573B2BA164CC00A9E47A /* Contracts */,
@@ -322,7 +332,7 @@
 				EB80573E2BA16A8900A9E47A /* Router */,
 				EB8057412BA16FD400A9E47A /* Builder */,
 			);
-			path = FavoriteScene;
+			path = FavoritesScene;
 			sourceTree = "<group>";
 		};
 		EB8057372BA12D6700A9E47A /* View */ = {
@@ -330,7 +340,7 @@
 			children = (
 				EB8057392BA1619F00A9E47A /* FavoritesViewController.swift */,
 				EB80574E2BA177CF00A9E47A /* FavoritesViewController+Search.swift */,
-				EB8057502BA1783200A9E47A /* FvoritesViewController+TableView.swift */,
+				EB8057502BA1783200A9E47A /* FavoritesViewController+TableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +411,97 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		EB8057582BA1F25C00A9E47A /* CommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057642BA1F3C900A9E47A /* EntitiesTests */,
+				EB80575E2BA1F38300A9E47A /* CoreDataTests */,
+			);
+			path = CommonTests;
+			sourceTree = "<group>";
+		};
+		EB8057592BA1F27200A9E47A /* ScenesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB80575A2BA1F27E00A9E47A /* HomeSceneTests */,
+				EB80575C2BA1F2AE00A9E47A /* FavoritesSceneTests */,
+				EB80575B2BA1F2A100A9E47A /* NoteSceneTests */,
+			);
+			path = ScenesTests;
+			sourceTree = "<group>";
+		};
+		EB80575A2BA1F27E00A9E47A /* HomeSceneTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057612BA1F3C900A9E47A /* ViewTests */,
+			);
+			path = HomeSceneTests;
+			sourceTree = "<group>";
+		};
+		EB80575B2BA1F2A100A9E47A /* NoteSceneTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB80576E2BA33C5300A9E47A /* ViewTests */,
+			);
+			path = NoteSceneTests;
+			sourceTree = "<group>";
+		};
+		EB80575C2BA1F2AE00A9E47A /* FavoritesSceneTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB80576B2BA336BB00A9E47A /* ViewTests */,
+			);
+			path = FavoritesSceneTests;
+			sourceTree = "<group>";
+		};
+		EB80575E2BA1F38300A9E47A /* CoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB80575D2BA1F38300A9E47A /* StorageManagerTests.swift */,
+			);
+			path = CoreDataTests;
+			sourceTree = "<group>";
+		};
+		EB8057612BA1F3C900A9E47A /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057602BA1F3C900A9E47A /* HomeViewControllerTests.swift */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
+		EB8057632BA1F3C900A9E47A /* NoteDisplayModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057622BA1F3C900A9E47A /* NoteDisplayModelTests.swift */,
+			);
+			path = NoteDisplayModelTests;
+			sourceTree = "<group>";
+		};
+		EB8057642BA1F3C900A9E47A /* EntitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB8057632BA1F3C900A9E47A /* NoteDisplayModelTests */,
+			);
+			path = EntitiesTests;
+			sourceTree = "<group>";
+		};
+		EB80576B2BA336BB00A9E47A /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB80576C2BA336FC00A9E47A /* FavoritesViewControllerTests.swift */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
+		EB80576E2BA33C5300A9E47A /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB80576F2BA33C7900A9E47A /* NoteDetailsViewControllerTests.swift */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
 		EBA3CF522B9F03D3004201B0 = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +534,8 @@
 		EBA3CF772B9F03D5004201B0 /* NotesAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB8057582BA1F25C00A9E47A /* CommonTests */,
+				EB8057592BA1F27200A9E47A /* ScenesTests */,
 				EBA3CF782B9F03D5004201B0 /* NotesAppTests.swift */,
 			);
 			path = NotesAppTests;
@@ -455,7 +558,6 @@
 				EB8056EA2B9F103B00A9E47A /* Extensions */,
 				EBA3CF932B9F0432004201B0 /* CoreData */,
 				EBA3CF952B9F0446004201B0 /* Storyboards */,
-				EBA3CF6F2B9F03D4004201B0 /* Info.plist */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -464,8 +566,8 @@
 			isa = PBXGroup;
 			children = (
 				EBA3CF962B9F04B0004201B0 /* HomeScene */,
+				EB8057362BA12D5100A9E47A /* FavoritesScene */,
 				EBA3CF972B9F04BD004201B0 /* NoteScene */,
-				EB8057362BA12D5100A9E47A /* FavoriteScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -487,6 +589,7 @@
 			children = (
 				EBA3CF5E2B9F03D3004201B0 /* AppDelegate.swift */,
 				EBA3CF6A2B9F03D4004201B0 /* Assets.xcassets */,
+				EBA3CF6F2B9F03D4004201B0 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -699,7 +802,7 @@
 				EB8057082B9F3ECE00A9E47A /* NotesItem+CoreDataClass.swift in Sources */,
 				EB8057092B9F3ECE00A9E47A /* NotesItem+CoreDataProperties.swift in Sources */,
 				EB8056E82B9F0FFE00A9E47A /* NoteDisplayModel.swift in Sources */,
-				EB8057512BA1783200A9E47A /* FvoritesViewController+TableView.swift in Sources */,
+				EB8057512BA1783200A9E47A /* FavoritesViewController+TableView.swift in Sources */,
 				EB8057292BA06BE200A9E47A /* NoteDetailsProtocols.swift in Sources */,
 				EB8057112B9FF45600A9E47A /* HomeViewController+Search.swift in Sources */,
 				EB8057462BA173A800A9E47A /* FavoritesPresenter.swift in Sources */,
@@ -716,7 +819,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB80576D2BA336FC00A9E47A /* FavoritesViewControllerTests.swift in Sources */,
 				EBA3CF792B9F03D5004201B0 /* NotesAppTests.swift in Sources */,
+				EB8057672BA1F3C900A9E47A /* HomeViewControllerTests.swift in Sources */,
+				EB8057682BA1F3C900A9E47A /* NoteDisplayModelTests.swift in Sources */,
+				EB80575F2BA1F38300A9E47A /* StorageManagerTests.swift in Sources */,
+				EB8057702BA33C7900A9E47A /* NoteDetailsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,7 +980,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NotesApp/Common/Info.plist;
+				INFOPLIST_FILE = NotesApp/Common/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -903,7 +1011,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NotesApp/Common/Info.plist;
+				INFOPLIST_FILE = NotesApp/Common/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
