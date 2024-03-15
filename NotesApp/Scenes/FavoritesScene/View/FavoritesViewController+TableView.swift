@@ -45,15 +45,25 @@ extension FavoritesViewController: UITableViewDelegate & UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let removeAction = configureRemoveAction(with: indexPath)
+        let removeAction = configureRemoveSwipeAction(with: indexPath)
         let config = UISwipeActionsConfiguration(actions: [removeAction])
         return config
     }
     
-    private func configureRemoveAction(with indexPath: IndexPath) -> UIContextualAction {
+  
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let removeFromFavoritesAction = configureUpdateFavoriteStatusSwipeAction(with: indexPath)
+        let config = UISwipeActionsConfiguration(actions: [removeFromFavoritesAction])
+        return config
+    }
+}
+
+extension FavoritesViewController {
+    
+    private func configureRemoveSwipeAction(with indexPath: IndexPath) -> UIContextualAction {
         let removeAction = UIContextualAction(style: .normal, title: nil) {
             _,_,completion in
-            self.removeNoteAction(at: indexPath)
+            self.removeNote(at: indexPath)
             completion(true)
         }
         removeAction.configureActionView(with: .remove)
@@ -61,7 +71,7 @@ extension FavoritesViewController: UITableViewDelegate & UITableViewDataSource {
         return removeAction
     }
     
-    private func removeNoteAction(at indexPath: IndexPath) {
+    private func removeNote(at indexPath: IndexPath) {
         let currentSource: [NoteModelProtocol]? = self.searchController.isSearching ? self.searchController.filteredNotes : self.dataSourceNotes
         if let noteToRemove = currentSource?[indexPath.row] {
             self.removeNoteLocal(at: indexPath)
@@ -84,17 +94,10 @@ extension FavoritesViewController: UITableViewDelegate & UITableViewDataSource {
         self.favoritesTableView.endUpdates()
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let removeFromFavoritesAction = configureRemoveFromFavoritesAction(with: indexPath)
-        let config = UISwipeActionsConfiguration(actions: [removeFromFavoritesAction])
-        return config
-    }
-    
-    
-    private func configureRemoveFromFavoritesAction(with indexPath: IndexPath) -> UIContextualAction {
+    private func configureUpdateFavoriteStatusSwipeAction(with indexPath: IndexPath) -> UIContextualAction {
         let removeFromFavoritesAction = UIContextualAction(style: .normal, title: nil) {
             _,_,completion in
-            self.updateFavoriteStatusAction(with: indexPath)
+            self.updateFavoriteStatus(with: indexPath)
             completion(true)
         }
         
@@ -106,9 +109,7 @@ extension FavoritesViewController: UITableViewDelegate & UITableViewDataSource {
         return removeFromFavoritesAction
     }
     
-    
-    
-    private func updateFavoriteStatusAction(with indexPath: IndexPath) {
+    private func updateFavoriteStatus(with indexPath: IndexPath) {
         let currentSource: [NoteModelProtocol]? = searchController.isSearching ? searchController.filteredNotes : dataSourceNotes
         if var noteToUpdate = currentSource?[indexPath.row] {
             self.updateFavoritesLocal(at: indexPath)
@@ -124,7 +125,4 @@ extension FavoritesViewController: UITableViewDelegate & UITableViewDataSource {
     private func updateFavoritesLocal(at indexPath: IndexPath) {
         self.removeNoteLocal(at: indexPath)
     }
-    
-    
-
 }

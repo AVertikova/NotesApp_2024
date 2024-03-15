@@ -50,6 +50,15 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
         return config
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let addToFavoriteAction = configureAddToFavoritesAction(with: indexPath)
+        let config = UISwipeActionsConfiguration(actions: [addToFavoriteAction])
+        return config
+    }
+}
+
+extension HomeViewController {
+    
     private func configureRemoveAction(with indexPath: IndexPath) -> UIContextualAction {
         let removeAction = UIContextualAction(style: .normal, title: nil) {
             _,_,completion in
@@ -84,12 +93,6 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
         self.notesTableView.endUpdates()
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let addToFavoriteAction = configureAddToFavoritesAction(with: indexPath)
-        let config = UISwipeActionsConfiguration(actions: [addToFavoriteAction])
-        return config
-    }
-    
     private func configureAddToFavoritesAction(with indexPath: IndexPath) -> UIContextualAction {
         let addToFavoriteAction = UIContextualAction(style: .normal, title: nil) {
             _,_,completion in
@@ -100,7 +103,7 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
         let currentSource: [NoteModelProtocol]? = self.searchController.isSearching ? self.searchController.filteredNotes : self.dataSourceNotes
         if (currentSource?[indexPath.row]) != nil {
             addToFavoriteAction.configureActionView(with: .favoriteIsFalse)
-            }
+        }
         return addToFavoriteAction
     }
     

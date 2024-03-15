@@ -24,13 +24,9 @@ extension UITableView {
 
     func initialize<Cell: UITableViewCell>(cellClass: Cell.Type,
                                            delegate: UITableViewDelegate? = nil,
-                                           dataSource: UITableViewDataSource? = nil,
-                                           headerView: UIView? = nil,
-                                           footerView: UIView? = UIView()) {
+                                           dataSource: UITableViewDataSource? = nil) {
         self.registerCellNib(cellClass: cellClass)
         self.delegate = delegate
         self.dataSource = dataSource
-        self.tableHeaderView = headerView
-        self.tableFooterView = footerView
     }
 }

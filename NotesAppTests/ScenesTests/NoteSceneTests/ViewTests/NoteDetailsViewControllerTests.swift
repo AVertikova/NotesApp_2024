@@ -33,7 +33,5 @@ final class NoteDetailsViewControllerTests: XCTestCase {
     func testNoteDetailsBodyContainsText() {
         XCTAssertEqual(sut.noteTextField.text, "New body")
     }
-
-
-    
 }
+

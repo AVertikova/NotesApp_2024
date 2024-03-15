@@ -34,6 +34,7 @@ protocol HomeInteractorPropertiesProtocol: AnyObject {
     var storageManager: StorageManagerProtocol? {get set}
 }
 
+
 // MARK: Home Interaction protocols
 
 protocol HomeViewToPresenterRequestProtocol: AnyObject {
