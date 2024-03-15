@@ -101,7 +101,6 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
         if (currentSource?[indexPath.row]) != nil {
             addToFavoriteAction.configureActionView(with: .favoriteIsFalse)
             }
-        
         return addToFavoriteAction
     }
     

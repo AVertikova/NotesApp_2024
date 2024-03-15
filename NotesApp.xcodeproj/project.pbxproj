@@ -56,7 +56,6 @@
 		EBA3CF5F2B9F03D3004201B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF5E2B9F03D3004201B0 /* AppDelegate.swift */; };
 		EBA3CF692B9F03D3004201B0 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF672B9F03D3004201B0 /* NotesApp.xcdatamodeld */; };
 		EBA3CF6B2B9F03D4004201B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA3CF6A2B9F03D4004201B0 /* Assets.xcassets */; };
-		EBA3CF792B9F03D5004201B0 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF782B9F03D5004201B0 /* NotesAppTests.swift */; };
 		EBA3CF832B9F03D5004201B0 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF822B9F03D5004201B0 /* NotesAppUITests.swift */; };
 		EBA3CF852B9F03D5004201B0 /* NotesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3CF842B9F03D5004201B0 /* NotesAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -131,7 +130,6 @@
 		EBA3CF6A2B9F03D4004201B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBA3CF6F2B9F03D4004201B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBA3CF742B9F03D5004201B0 /* NotesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBA3CF782B9F03D5004201B0 /* NotesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppTests.swift; sourceTree = "<group>"; };
 		EBA3CF7E2B9F03D5004201B0 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA3CF822B9F03D5004201B0 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		EBA3CF842B9F03D5004201B0 /* NotesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -536,7 +534,6 @@
 			children = (
 				EB8057582BA1F25C00A9E47A /* CommonTests */,
 				EB8057592BA1F27200A9E47A /* ScenesTests */,
-				EBA3CF782B9F03D5004201B0 /* NotesAppTests.swift */,
 			);
 			path = NotesAppTests;
 			sourceTree = "<group>";
@@ -820,7 +817,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB80576D2BA336FC00A9E47A /* FavoritesViewControllerTests.swift in Sources */,
-				EBA3CF792B9F03D5004201B0 /* NotesAppTests.swift in Sources */,
 				EB8057672BA1F3C900A9E47A /* HomeViewControllerTests.swift in Sources */,
 				EB8057682BA1F3C900A9E47A /* NoteDisplayModelTests.swift in Sources */,
 				EB80575F2BA1F38300A9E47A /* StorageManagerTests.swift in Sources */,

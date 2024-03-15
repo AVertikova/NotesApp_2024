@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, HomeViewPropertiesProtocol, HomeView
 }
 
 extension HomeViewController: HomePresenterToViewResponseProtocol {
+    
     func displayNotes(viewModel: Notes.GetNotesData.ViewModel) {
         if viewModel.notes != nil {
             self.dataSourceNotes = viewModel.notes

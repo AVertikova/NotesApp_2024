@@ -19,7 +19,6 @@ class FavoritesViewController: UIViewController, FavoritesViewPropertiesProtocol
         presenter?.viewWillAppear()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupSearchController()

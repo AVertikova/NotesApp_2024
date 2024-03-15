@@ -9,7 +9,7 @@ import Foundation
 
 class NoteDetailsPresenter: NoteDetailsPresenterPropertiesProtocol {
     var selectedNote: NoteModelProtocol?
-    var viewController: NoteDetailsPresenterToViewResponseProtocol?
+    weak var viewController: NoteDetailsPresenterToViewResponseProtocol?
     var interactor: NoteDetailsPresenterToInteractorRequestProtocol?
 }
 

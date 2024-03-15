@@ -8,7 +8,7 @@
 import Foundation
 
 class FavoritesPresenter: FavoritesPresenterPropertiesProtocol {
-    var viewController: FavoritesPresenterToViewResponseProtocol?
+    weak var viewController: FavoritesPresenterToViewResponseProtocol?
     var interactor: FavoritesPresenterToInteractorRequestProtocol?
     var router: FavoritesPresenterToRouterRequestProtocol?
 }

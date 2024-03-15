@@ -26,7 +26,6 @@ struct Notes {
         }
 
         struct Response {}
-        
         struct ViewModel {}
     }
 

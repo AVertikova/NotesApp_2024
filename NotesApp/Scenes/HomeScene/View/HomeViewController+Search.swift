@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension HomeViewController:  UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         filterNotes(searchController.searchBar.text ?? "")
     }

@@ -12,7 +12,6 @@ class HomePresenter: HomePresenterPropertiesProtocol {
     weak var viewController: HomePresenterToViewResponseProtocol?
     var interactor: HomePresenterToInteractorRequestProtocol?
     var router: HomePresenterToRouterRequestProtocol?
-
 }
 
 extension HomePresenter: HomeViewToPresenterRequestProtocol {
@@ -20,7 +19,6 @@ extension HomePresenter: HomeViewToPresenterRequestProtocol {
         let request = Notes.GetNotesData.Request()
         interactor?.fetchNotesList(request: request)
     }
-    
     
     func viewWillAppear() {
         let request = Notes.GetNotesData.Request()
