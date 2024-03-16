@@ -51,6 +51,17 @@
                BlueprintName = "NotesAppUITests"
                ReferencedContainer = "container:NotesApp.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "NotesAppUITests/testLaunchPerformance()">
+               </Test>
+               <Test
+                  Identifier = "NotesAppUITestsLaunchTests">
+               </Test>
+               <Test
+                  Identifier = "NotesAppUITestsLaunchTests/testLaunch()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

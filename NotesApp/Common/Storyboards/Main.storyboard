@@ -110,7 +110,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="noteTextField" destination="N4R-vW-152" id="Y56-Fc-Ihr"/>
+                        <outlet property="noteBodyField" destination="N4R-vW-152" id="Y56-Fc-Ihr"/>
                         <outlet property="noteTitleField" destination="JXL-Wi-PCW" id="BM7-kL-Xmd"/>
                     </connections>
                 </viewController>

@@ -19,6 +19,7 @@ final class NoteDetailsViewControllerTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        try super.tearDownWithError()
         sut = nil
     }
     
@@ -31,7 +32,15 @@ final class NoteDetailsViewControllerTests: XCTestCase {
     }
     
     func testNoteDetailsBodyContainsText() {
-        XCTAssertEqual(sut.noteTextField.text, "New body")
+        XCTAssertEqual(sut.noteBodyField.text, "New body")
+    }
+    
+    func testNoteDetailsViewControllerHasTitleLabel() {
+        XCTAssertNotNil(sut.noteTitleField)
+    }
+    
+    func testNoteDetailsViewControllerHasBodyLabel() {
+        XCTAssertNotNil(sut.noteBodyField)
     }
 }
 
