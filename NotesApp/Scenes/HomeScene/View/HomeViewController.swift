@@ -54,7 +54,7 @@ extension HomeViewController: HomePresenterToViewResponseProtocol {
     }
     
     private func setFavoritesIconImage(with isEmpty: Bool) {
-        favoriteButton.image = isEmpty ?  
+        self.favoriteButton.image = isEmpty ?  
         UIImage(systemName: ActionImage.favoriteIsFalse.rawValue) :
         UIImage(systemName: ActionImage.favoriteIsTrue.rawValue)
     }
