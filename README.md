@@ -25,6 +25,7 @@ The App is implemented basing on VIPER architecture. Unit tests applied.
 ![Simulator Screen Recording - iPhone 15 Pro - 2024-03-17 at 15 21 08](https://github.com/AVertikova/NotesApp_CFT_2024/assets/156770572/380ddedc-cbaa-41ce-a788-87430b3632a8)
 
 ## Moving note to Favorites at home scene
+Star icon at top left shows whether Favorites contains any notes.
 ![Simulator Screen Recording - iPhone 15 Pro - 2024-03-17 at 15 40 30](https://github.com/AVertikova/NotesApp_CFT_2024/assets/156770572/2e9a451d-3278-4e0b-ae64-94c58d427b24)
 
 ## Moving note to Favorites at note details scene
