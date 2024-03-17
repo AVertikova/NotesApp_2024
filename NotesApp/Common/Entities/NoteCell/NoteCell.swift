@@ -8,8 +8,6 @@
 import UIKit
 
 class NoteCell: UITableViewCell {
-    static let identifier = "NoteCell"
-
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
