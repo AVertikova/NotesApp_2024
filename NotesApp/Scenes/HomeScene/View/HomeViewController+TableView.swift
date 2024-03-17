@@ -55,6 +55,8 @@ extension HomeViewController: UITableViewDelegate & UITableViewDataSource {
         let config = UISwipeActionsConfiguration(actions: [addToFavoriteAction])
         return config
     }
+    
+   
 }
 
 extension HomeViewController {
@@ -66,7 +68,6 @@ extension HomeViewController {
             completion(true)
         }
         removeAction.configureActionView(with: .remove)
-        
         return removeAction
     }
     
@@ -103,6 +104,7 @@ extension HomeViewController {
         let currentSource: [NoteModelProtocol]? = self.searchController.isSearching ? self.searchController.filteredNotes : self.dataSourceNotes
         if (currentSource?[indexPath.row]) != nil {
             addToFavoriteAction.configureActionView(with: .favoriteIsFalse)
+            
         }
         return addToFavoriteAction
     }
@@ -122,5 +124,6 @@ extension HomeViewController {
     
     private func updateFavoritesLocal(at indexPath: IndexPath) {
         self.removeNoteLocal(at: indexPath)
+        self.favoriteButton.image = UIImage(systemName: ActionImage.favoriteIsTrue.rawValue)
     }
 }

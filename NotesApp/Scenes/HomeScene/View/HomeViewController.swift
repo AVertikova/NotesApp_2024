@@ -48,7 +48,14 @@ extension HomeViewController: HomePresenterToViewResponseProtocol {
     func displayNotes(viewModel: Notes.GetNotesData.ViewModel) {
         if viewModel.notes != nil {
             self.dataSourceNotes = viewModel.notes
+            self.setFavoritesIconImage(with: viewModel.favoritesEmpty)
             self.notesTableView.reloadData()
         }
+    }
+    
+    private func setFavoritesIconImage(with isEmpty: Bool) {
+        self.favoriteButton.image = isEmpty ?  
+        UIImage(systemName: ActionImage.favoriteIsFalse.rawValue) :
+        UIImage(systemName: ActionImage.favoriteIsTrue.rawValue)
     }
 }

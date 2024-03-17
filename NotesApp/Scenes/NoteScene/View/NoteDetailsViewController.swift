@@ -9,11 +9,13 @@ import UIKit
 
 class NoteDetailsViewController: UIViewController, NoteDetailsViewPropertiesProtocol {
     var presenter: NoteDetailsViewToPresenterRequestProtocol?
-    private var currenNote: NoteModelProtocol?
+    private var currentNote: NoteModelProtocol?
+    private var isFavorite = false
 
     @IBOutlet weak var noteTitleField: UITextField!
     @IBOutlet weak var noteBodyField: UITextView!
-
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getData()
@@ -23,13 +25,21 @@ class NoteDetailsViewController: UIViewController, NoteDetailsViewPropertiesProt
         presenter?.fetchNoteDetails()
     }
     
+    
+    
+    
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        isFavorite.toggle()
+        favoriteButton.image =  isFavorite ? UIImage(systemName: ActionImage.favoriteIsTrue.rawValue) : UIImage(systemName: ActionImage.favoriteIsFalse.rawValue)
+    }
+    
     @IBAction func saveNoteButtonTapped(_ sender: Any) {
 
         let noteToSave = NoteDisplayModel(id: UUID(), 
                                           date: Date(),
                                           title: noteTitleField.text ?? "",
                                           body: noteBodyField.text ?? "",
-                                          favorite: currenNote?.favorite ?? false)
+                                          favorite: isFavorite)
         let request = Note.NoteAddedOrUpdated.Request(currentNote: noteToSave)
         presenter?.saveNoteButtonTapped(request: request)
         navigationController?.popViewController(animated: true)
@@ -39,10 +49,13 @@ class NoteDetailsViewController: UIViewController, NoteDetailsViewPropertiesProt
 extension NoteDetailsViewController: NoteDetailsPresenterToViewResponseProtocol {
     
     func displayNoteDetails(viewModel: Note.GetNoteDetailsData.ViewModel) {
-        self.currenNote = viewModel.note
-        noteTitleField.text = viewModel.note?.title
-        noteBodyField.text = viewModel.note?.body
-        title = viewModel.note?.userFormatDate
-
+        if let note = viewModel.note {
+            self.currentNote = note
+            self.isFavorite = note.favorite
+            noteTitleField.text = note.title
+            noteBodyField.text =  note.body
+            favoriteButton.image =  note.favorite ? UIImage(systemName: ActionImage.favoriteIsTrue.rawValue) : UIImage(systemName: ActionImage.favoriteIsFalse.rawValue)
+            //        title = viewModel.note?.userFormatDate
+        }
     }
 }

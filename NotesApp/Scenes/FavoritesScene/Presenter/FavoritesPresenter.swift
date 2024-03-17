@@ -38,7 +38,7 @@ extension FavoritesPresenter: FavoritesInteractorToPresenterResponseProtocol {
     func presentFetchedFavorites(response: Favorites.GetFavoritesData.Response) {
         if let notes = response.notes {
             let sorted = notes.sortByFavorite()
-            let viewModel = Favorites.GetFavoritesData.ViewModel(notes: sorted.favorite)
+            let viewModel = Favorites.GetFavoritesData.ViewModel(notes: sorted.favorites)
             viewController?.displayNotes(viewModel: viewModel)
         }
     }

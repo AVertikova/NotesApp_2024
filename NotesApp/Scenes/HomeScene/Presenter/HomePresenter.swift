@@ -39,7 +39,8 @@ extension HomePresenter: HomeInteractorToPresenterResponseProtocol {
     func presentFetchedNotes(response: Notes.GetNotesData.Response) {
         if let notes = response.notes {
             let sorted = notes.sortByFavorite()
-            let viewModel = Notes.GetNotesData.ViewModel(notes: sorted.common)
+            let viewModel = Notes.GetNotesData.ViewModel(notes: sorted.common, favoritesEmpty: sorted.favorites.isEmpty)
+            
             viewController?.displayNotes(viewModel: viewModel)
         }
     }

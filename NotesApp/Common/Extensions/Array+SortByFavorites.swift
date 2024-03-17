@@ -6,13 +6,13 @@
 //
 
 import Foundation
-typealias SortedByFavorite = (common: [NoteModelProtocol], favorite: [NoteModelProtocol])
+typealias SortedByFavorite = (common: [NoteModelProtocol], favorites: [NoteModelProtocol])
 
 extension Array where Element == NoteModelProtocol {
     func sortByFavorite() -> SortedByFavorite {
         let common: [NoteModelProtocol] = self.filter{$0.favorite == false}
-        let favorite: [NoteModelProtocol] = self.filter{$0.favorite == true}
-        return (common, favorite)
+        let favorites: [NoteModelProtocol] = self.filter{$0.favorite == true}
+        return (common, favorites)
     }
   }
 

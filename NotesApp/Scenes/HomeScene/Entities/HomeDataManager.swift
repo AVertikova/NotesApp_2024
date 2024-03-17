@@ -17,6 +17,7 @@ struct Notes {
 
         struct ViewModel {
             var notes: [NoteModelProtocol]?
+            var favoritesEmpty: Bool
         }
     }
     
