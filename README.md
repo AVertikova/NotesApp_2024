@@ -15,6 +15,8 @@ and search a note by title or body text in both of the lists separately.
 Notes are stored using CoreData.
 The App is implemented basing on VIPER architecture. Unit tests applied.
 
+**Task installation**: clone or download main branch, run the project with XCode.
+
 ## Adding a new note
 ![Simulator Screen Recording - iPhone 15 Pro - 2024-03-17 at 15 20 00](https://github.com/AVertikova/NotesApp_CFT_2024/assets/156770572/f5dbd395-38ce-43f9-8e5b-01b427220852)
 
