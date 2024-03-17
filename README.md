@@ -1,5 +1,5 @@
-# NotesApp_SHIFT
-Test task for SHIFT educational course, implemented according to given specifications.
+# NotesApp
+Test task for ios educational course, implemented according to given specifications.
 
 The app allows to browse, add, edit, save, remove notes, as well as to move notes to favorites list and back inside home scene or note details scene, 
 and search a note by title or body text in both of the lists separately.
