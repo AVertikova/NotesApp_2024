@@ -1,4 +1,4 @@
-# NotesApp
+# Notes
 Test task for ios educational course, implemented according to given specifications.
 
 The app allows to browse, add, edit, save, remove notes, as well as to move notes to favorites list and back inside home scene or note details scene, 
