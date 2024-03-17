@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "D8DA499D-8DC1-41E7-8050-D26BE72CBEBB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:NotesApp.xcodeproj",
+      "identifier" : "EBA3CF5A2B9F03D3004201B0",
+      "name" : "NotesApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:NotesApp.xcodeproj",
+        "identifier" : "EBA3CF732B9F03D5004201B0",
+        "name" : "NotesAppUnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
