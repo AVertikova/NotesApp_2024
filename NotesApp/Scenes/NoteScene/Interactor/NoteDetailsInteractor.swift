@@ -8,7 +8,7 @@
 import Foundation
 
 class NoteDetailsInteractor: NoteDetailsInteractorPropertiesProtocol {
-    var presenter: NoteDetailsInteractorToPresenterResponseProtocol?
+    weak var presenter: NoteDetailsInteractorToPresenterResponseProtocol?
     var storageManager: StorageManagerProtocol?
 }
 

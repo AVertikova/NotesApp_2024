@@ -8,7 +8,7 @@
 import Foundation
 
 class FavoritesInteractor: FavoritesInteractorPropertiesProtocol {
-    var presenter: FavoritesInteractorToPresenterResponseProtocol?
+    weak var presenter: FavoritesInteractorToPresenterResponseProtocol?
     var storageManager: StorageManagerProtocol?
 }
 
