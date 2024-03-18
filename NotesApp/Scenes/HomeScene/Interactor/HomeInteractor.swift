@@ -19,12 +19,13 @@ extension HomeInteractor: HomePresenterToInteractorRequestProtocol {
     func fetchNotesList(request: Notes.GetNotesData.Request) {
         var response = Notes.GetNotesData.Response()
         response.notes = storageManager?.fetchNotesList()
+        storageManager?.onboardingPassed = true
         presenter?.presentFetchedNotes(response: response)
     }
     
     func updateNotesList(request: Notes.GetNotesData.Request) {
         var response = Notes.GetNotesData.Response()
-        response.notes = storageManager?.updateNotesList()
+        response.notes = storageManager?.fetchNotesList()
         presenter?.presentFetchedNotes(response: response)
     }
     

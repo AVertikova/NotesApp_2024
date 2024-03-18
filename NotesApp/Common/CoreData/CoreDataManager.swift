@@ -40,6 +40,10 @@ class CoreDataManager: StorageManagerProtocol {
         return container
     }()
     
+    var onboardingPassed: Bool {
+        get { UserDefaults.standard.bool(forKey: "onboardingPassed") }
+        set { UserDefaults.standard.set(newValue, forKey: "onboardingPassed") }
+    }
     
     private lazy var defaultNote: NoteDisplayModel = {
         var note: NoteDisplayModel = NoteDisplayModel(id: UUID(),
@@ -58,26 +62,15 @@ class CoreDataManager: StorageManagerProtocol {
         do {
             let results = try context.fetch(fetchRequest)
             if results.isEmpty {
-                return [defaultNote]
+                if onboardingPassed {
+                   return [NoteModelProtocol]()
+                } else {
+                    return [defaultNote]
+                }
             }
             return dataAdapter.mapData(results)
         } catch _ {
             return [NoteModelProtocol]()
-        }
-    }
-    
-    func fetchFavoritesList() -> [NoteModelProtocol] {
-        self.updateNotesList()
-    }
-    
-    func updateNotesList() -> [NoteModelProtocol] {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NotesItem>(entityName: entityName)
-        do {
-            let results = try context.fetch(fetchRequest)
-            return dataAdapter.mapData(results)
-        } catch _ {
-            return [NoteDisplayModel()]
         }
     }
     

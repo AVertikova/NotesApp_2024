@@ -8,9 +8,8 @@
 import Foundation
 
 protocol StorageManagerProtocol {
+    var onboardingPassed: Bool { get set }
     func fetchNotesList() -> [NoteModelProtocol]
-    func fetchFavoritesList() -> [NoteModelProtocol]
-    func updateNotesList() -> [NoteModelProtocol]
     func saveNote(noteToSave: NoteModelProtocol)
     func updateNote(oldValue: NoteModelProtocol, newValue: NoteModelProtocol)
     func favoriteStatusUpdate(noteToUpdate: NoteModelProtocol)

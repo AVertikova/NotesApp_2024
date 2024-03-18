@@ -16,13 +16,13 @@ extension FavoritesInteractor: FavoritesPresenterToInteractorRequestProtocol {
     
     func fetchFavoritesList(request: Favorites.GetFavoritesData.Request) {
         var response = Favorites.GetFavoritesData.Response()
-        response.notes = storageManager?.fetchFavoritesList()
+        response.notes = storageManager?.fetchNotesList()
         presenter?.presentFetchedFavorites(response: response)
     }
     
     func updateFavoritesList(request: Favorites.GetFavoritesData.Request) {
         var response = Favorites.GetFavoritesData.Response()
-        response.notes = storageManager?.updateNotesList()
+        response.notes = storageManager?.fetchNotesList()
         presenter?.presentFetchedFavorites(response: response)
     }
     

@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true
-
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
